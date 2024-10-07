@@ -16,7 +16,6 @@ import urllib3
 
 team_abbr_to_name_mlb = {
     'ANA': 'Anaheim Ducks',
-    'ARI': 'Arizona Coyotes',
     'BOS': 'Boston Bruins',
     'BUF': 'Buffalo Sabres',
     'CGY': 'Calgary Flames',
@@ -50,6 +49,7 @@ team_abbr_to_name_mlb = {
     'STL': 'St. Louis Blues',
     'TBL': 'Tampa Bay Lightning',
     'TB': 'Tampa Bay Lightning',
+    'UTA': 'Utah Hockey Club',
     'TOR': 'Toronto Maple Leafs',
     'VAN': 'Vancouver Canucks',
     'VGK': 'Vegas Golden Knights',
@@ -248,9 +248,9 @@ def fetch_mlb_consensus(url, tipser):
     
 def main():
 
-    today = datetime.today().date()
+    today = datetime.today().date() + pd.Timedelta(days=1)
 
-    today_2 = pd.Timestamp('now').floor('D')
+    today_2 = pd.Timestamp('now').floor('D') + pd.Timedelta(days=1)
 
     elo_url = 'https://raw.githubusercontent.com/Neil-Paine-1/NHL-Player-And-Team-Ratings/master/nhl_elo.csv'
     elo_df = pd.read_csv(elo_url).drop_duplicates()
@@ -399,14 +399,14 @@ def main():
     # Calculate Expected Value (EV) for Home Team
     merged_df['Home EV'] = merged_df.apply(lambda x: calculate_ev(x['home_team_percentage'], x['Home MoneyLine']), axis=1)
 
-##    merged_df['away_team_percentage'] = (merged_df['away_team_percentage'] + merged_df['Away MoneyLine']) / 2
-##    merged_df['home_team_percentage'] = (merged_df['home_team_percentage'] + merged_df['Home MoneyLine']) / 2
-##
-##    # Calculate Expected Value (EV) for Away Team
-##    merged_df['Away EV'] = merged_df.apply(lambda x: calculate_ev(x['away_team_percentage'], x['Away MoneyLine']), axis=1)
-##
-##    # Calculate Expected Value (EV) for Home Team
-##    merged_df['Home EV'] = merged_df.apply(lambda x: calculate_ev(x['home_team_percentage'], x['Home MoneyLine']), axis=1)
+    merged_df['away_team_percentage'] = (merged_df['away_team_percentage'] + merged_df['Away MoneyLine']) / 2
+    merged_df['home_team_percentage'] = (merged_df['home_team_percentage'] + merged_df['Home MoneyLine']) / 2
+
+    # Calculate Expected Value (EV) for Away Team
+    merged_df['Away EV'] = merged_df.apply(lambda x: calculate_ev(x['away_team_percentage'], x['Away MoneyLine']), axis=1)
+
+    # Calculate Expected Value (EV) for Home Team
+    merged_df['Home EV'] = merged_df.apply(lambda x: calculate_ev(x['home_team_percentage'], x['Home MoneyLine']), axis=1)
 
     merged_df =  merged_df.drop_duplicates(subset=['away_team', 'home_team'])
 
@@ -415,6 +415,10 @@ def main():
     merged_df.drop('Home MoneyLine', axis=1, inplace=True)
 
     merged_df.drop('Away MoneyLine', axis=1, inplace=True)
+
+    merged_df.drop('home_team_elo', axis=1, inplace=True)
+
+    merged_df.drop('away_team_elo', axis=1, inplace=True)
 
     merged_df.drop('date', axis=1, inplace=True)
 
@@ -454,7 +458,7 @@ def main():
     sheet = spreadsheet.sheet1
 
     # Clear existing data
-    #sheet.clear()
+    sheet.clear()
 
     # Check if the first row is empty (indicating a need for headers)
     if not sheet.row_values(1):  # This checks the first row for any content

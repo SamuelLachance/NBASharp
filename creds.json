@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "lachancepred",
+  "private_key_id": "fcc1d2edbd4e5cda07a81647a901aa39c0451fc4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCvY5bXPeN1uP19\nFDKzzkYXxbKOvauN0cPl2osnBODm49JOLlRJNuXXCAT4Qoyp019k6RHjpMRbGDbd\nPII/XCxTHwP/iko/Fg9xVIQa+EnUd2Wg/6OuoVl9Pe8FlVxAI8nlRegQOxINXTKu\ngGoe9eIXepxZH1Ur+WQe0175HUhs9MM9mhjq+kUfEYTakipMV/kSRe3eFu+qbjxm\nQDtWi8jx0vIj+fc/Fj2pptFqt16Ab66IYfpEf+p5Y/oI9dW0jyxeICmE8PsTxWIB\nX4k95QClipdjpLQMEipAFMIr+UUyrWfR+SCfmafKCL1vwMcUwUpxBTRs0mqfkfao\nQvX14kP/AgMBAAECggEAFbP0yhpjbNbWWfBHkeO4MrWJBzbF5XJhPlkmbPlNPI+m\ndNGGJoUqOHX1P3nktBhu2SrUxt7wWUwMG0ujMQ9JK4P5V67CHz+t64UyJQWNBUM9\nCojNCrf2kz6NtvAo49r0icV2a5kTqR8GPX0Fz2JNIZX6MOEQBgqsmU/olFpLnbJm\nEGc+ZaIJLQMh+H0T4m8y0kSKqH8NOOiASQB3NYIcBnfn2naS/u/DC6d+kokqBa7S\ny0vvuWxYKsfJ8ixAYIIwt2gqOkwyoY1K2OrEZAE4WLIKuEM3COEVffYS3I0S7S/Y\n4jU1YJfZT6/2vr+60sNuu1tUXAxG44kJSwZ3HwKMyQKBgQDEdIA0FjGh4x29eqGP\n3scIv+Kq4YI6MwWq2OGcFILeXbN4MOIHHfDDr3T38/a8z+Nbl80X6bYuObEv7fSi\no0EgTsKCu00TjP3sMojmqYSMonhxNJ1gWYUTCGkInKxZ50uvQpo49fNf/GGwRKTJ\nOycHQ5uJlicO5R0nMEg/SV81CwKBgQDkjIOLmCvkIo1KfE6JH50Kv/0Eg4pE21Pd\nZyuqdxQt9NuWCGX/+HwhEh2+lrJC60SkBZJhE0k3howYvaIMhWF+95Fex1U7Aj26\n6aFRmzJy1g3ijphmlQ2UK3fNYqU1TQp3f4gU7Qcp1u9mhfn8cgsZiUrooqXAedco\njK9ArnVdXQKBgQCjFqwPkZUmdasMz68sBp9ozhNYFNnNgunjiSTSM9zoyRTiZIJf\nsiVb7l7GMQvWdyahtQWYIncRLOfBiGOcWLcKIRgs+1zjLBroaJNqGbRmI8KlCC7V\n+7sTr9myQo56HB+ioUHyo4ulVZmrgXDjdW3TA/ctYy+Nl/p5vAVeNIULPQKBgQDB\nAKhVyjvGfCc1L6Rix/+mhFr25N5vJ4i6/9UwLz8rUAvft1frwbuRcesMd9YyDNv6\nZ3ol4FOEQGsuuXWPfVPIFOj+UPb4zfuzTHieoaEIuRsgp6qrdlPxPIP/Pb6mNFkS\ncPBKO6BBBPFGcv2Y4fXdqsNHkZLH6Bx6cdPNm4YhQQKBgEcaE+aJSV5nmP2SBe9l\nyYtRqX0zDZI+5RRM6q8stw7mirroOtOy7pt9Hi4EpPLW/5kkDz/RDjmmkb9zkD56\n0fDT0FNXgRuFA+T/TvcaGQOpOQhA6e0uV9oGPs+dmvbN0ph8rytP54rFjUSc6yBP\nHw8/IqpJY5zrAQqnGFsMnP9H\n-----END PRIVATE KEY-----\n",
+  "client_email": "youmustbelieve@lachancepred.iam.gserviceaccount.com",
+  "client_id": "112501777488968241821",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/youmustbelieve%40lachancepred.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
